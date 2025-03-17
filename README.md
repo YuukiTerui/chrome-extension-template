@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# chrome-extension-template
+A template for creating Chrome extensions with modern web technologies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This repository provides a boilerplate template for developing Chrome extensions using modern web development tools and practices. It includes a basic setup for a Chrome extension with a popup, background script, and content scripts, all written in TypeScript. The template is designed to help developers quickly get started with building Chrome extensions, ensuring a structured and maintainable codebase.
 
-Currently, two official plugins are available:
+## Features
+- TypeScript: Write your extension code in TypeScript for better type safety and developer experience.
+- Modular Architecture: Organized file structure to keep your code clean and maintainable.
+- Modern JavaScript: Use ES6+ features and syntax.
+- Build Tools: Pre-configured build tools to compile TypeScript and bundle your extension.
+- Example Components: Includes example components and scripts to demonstrate common extension functionalities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+Clone the repository:
+```sh
+git clone https://github.com/your-username/chrome-extension-template.git
+cd chrome-extension-template
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Install dependencies:
+```sh
+bun i
 ```
+Build the extension:
+```sh
+bun run build
+```
+Load the extension in Chrome:
+- Open Chrome and navigate to chrome://extensions/.
+- Enable "Developer mode" in the top right corner.
+- Click "Load unpacked" and select the dist folder from this repository.
+
+## Usage
+- Modify the source code in the src directory to add your extension's functionality.
+- Use bun run build to compile your TypeScript code and bundle the extension.
+- Reload the extension in Chrome to see your changes.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request with your improvements.
+
+## License
+This project is licensed under the MIT License.
