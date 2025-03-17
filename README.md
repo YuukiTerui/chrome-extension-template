@@ -26,7 +26,7 @@ Build the extension:
 bun run build
 ```
 Load the extension in Chrome:
-- Open Chrome and navigate to chrome://extensions/.
+- Open Chrome and navigate to <a href="chrome://extensions/.">chrome://extensions/.</a>
 - Enable "Developer mode" in the top right corner.
 - Click "Load unpacked" and select the dist folder from this repository.
 
